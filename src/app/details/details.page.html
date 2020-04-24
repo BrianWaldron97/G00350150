@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Personal Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <ion-input [(ngModel)]="name" placeholder="Please enter your first name"></ion-input>
+  <br>
+  <!-- Saves name inside ion-input -->
+  <ion-button (click)="onSave()">SAVE</ion-button>
+  <!-- Button to return to the home page -->
+  <ion-button [routerLink]="['/home']">RETURN</ion-button>
+  <br><br>
+  <!-- Gets your location -->
+  <ion-button (click)="getGeolocation()">Get My Location</ion-button>
+  <br>
+  <h4>Latitude: {{latitude}} Longitude: {{longitude}}</h4>
+</ion-content>

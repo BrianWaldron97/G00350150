@@ -25,3 +25,27 @@
 #container a {
   text-decoration: none;
 }
+
+// CSS used for certain tags
+ion-title {
+  color: royalblue;
+  font-size: 25px;
+  font-style: oblique;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ion-icon {
+  color: green;
+}
+
+ion-button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}

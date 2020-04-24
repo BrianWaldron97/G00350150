@@ -1,20 +1,42 @@
+<!-- Ion header used throughtout the project for style, using title and an icon -->
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-button slot="start" fill="clear" color="dark">
+      <ion-icon slot="icon-only" name="earth-sharp"></ion-icon>
+    </ion-button>
+    <ion-title size="large">Get All The Latest News</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <br>
+  <!-- [routerLink] used to connect pages to other pages using buttons -->
+  <!-- Goes to the Personal deatails page -->
+  <ion-button [routerLink]="['/details']" fill="clear" color="dark">
+    <ion-icon slot="icon-only" name="body"></ion-icon>  
+  </ion-button>
+  <!-- Gets "name" stored -->
+  <!-- slight error where name doesn't change until page is reloaded -->
+  <h4>Welcome {{firstName}}</h4>
+  <br>
+  <br>
+  <!-- Goes to the Irish news -->
+  <img length="700" width="400" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg"/> 
+  <br>
+  <ion-button [routerLink]="['/news']">Go to Irish News</ion-button>
+  <br>
+  <!-- Goes to Animal crossing news -->
+  <img length="700" width="400" src="https://i.redd.it/r0ny0t4wnbf41.png"/> 
+  <br>
+  <ion-button [routerLink]="['/animal-crossing-news']">Animal Crossing News</ion-button>
+  <br>
+  <!-- Goes to Technology news -->
+  <img length="700" width="400" src="https://www.kindpng.com/picc/m/73-730024_advanced-technology-icon-png-transparent-png.png"/> 
+  <br>
+  <ion-button [routerLink]="['/tech-news']">Technology News</ion-button>
+  <br>
+  <!-- Goes to Astronomy news-->
+  <img length="700" width="400" src="https://cdn4.iconfinder.com/data/icons/space-and-astronomy-1/800/telescope-512.png"/> 
+  <br>
+  <ion-button [routerLink]="['/astronomy-news']">Astronomy News</ion-button>
 </ion-content>

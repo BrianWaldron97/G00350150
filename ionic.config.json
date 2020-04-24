@@ -1,5 +1,7 @@
 {
   "name": "G00350150",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-undo" text="back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Animal Crossing News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-app>
+    <ion-content>
+      <ion-card *ngFor="let animalNews of animalCrossingData">
+        <a href="{{animalNews.url}}">
+        <img width="700" height="450" src="{{animalNews.urlToImage}}"/>
+        </a>
+        <ion-card-header>         
+          <ion-card-title>{{animalNews.title}}</ion-card-title>
+          <ion-card-subtitle>{{animalNews.author}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          {{animalNews.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ion-app>
+
+
+</ion-content>

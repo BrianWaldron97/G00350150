@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-undo" text="back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Astronomy News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-app>
+    <ion-content>
+      <ion-card *ngFor="let astroNews of astronomyData">
+        <a href="{{astroNews.url}}">
+        <img width="700" src="{{astroNews.urlToImage}}"/>
+        </a>
+        <ion-card-header>         
+          <ion-card-title>{{astroNews.title}}</ion-card-title>
+          <ion-card-subtitle>{{astroNews.author}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          {{astroNews.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ion-app>
+
+
+</ion-content>
+
